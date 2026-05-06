@@ -38,6 +38,17 @@
     </snapshotRepository>
   </distributionManagement>
 
+  <repositories>
+    <repository>
+      <id>gbif-all</id>
+      <url>https://repository.gbif.org/content/groups/gbif</url>
+    </repository>
+    <repository>
+      <id>thirdparty</id>
+      <url>https://repository.gbif.org/content/repositories/thirdparty</url>
+    </repository>
+  </repositories>
+
   <build>
     <plugins>
       <!--
@@ -48,6 +59,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-test-jar</id>
+            <phase>none</phase>
+          </execution>
+        </executions>
         <configuration>
           <skipIfEmpty>false</skipIfEmpty>
         </configuration>
