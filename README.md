@@ -9,7 +9,7 @@ for classpath access in Java projects.
 <dependency>
   <groupId>org.gbif</groupId>
   <artifactId>dwc-dp-schemas</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0-DEV</version>
 </dependency>
 ```
 
@@ -32,18 +32,18 @@ schemas/
 
 ```java
 // Profile
-InputStream profile = getClass().getResourceAsStream("/schemas/0.1/dwc-dp-profile.json");
+InputStream profile = getClass().getResourceAsStream("/schemas/1.0_DEV/dwc-dp-profile.json");
 
 // Index
-InputStream index = getClass().getResourceAsStream("/schemas/0.1/index.json");
+InputStream index = getClass().getResourceAsStream("/schemas/1.0_DEV/index.json");
 
 // Table schema
-InputStream eventSchema = getClass().getResourceAsStream("/schemas/0.1/table-schemas/event.json");
+InputStream eventSchema = getClass().getResourceAsStream("/schemas/1.0_DEV/table-schemas/event.json");
 ```
 
 ## Versioning
 
-The schema version (`0.1`, `0.2`, …) corresponds to the DwC-DP spec version tracked in
+The schema version (`0.1`, `1.0_DEV`, …) corresponds to the DwC-DP spec version tracked in
 [gbif/dwc-dp](https://github.com/gbif/dwc-dp). Multiple versions can coexist in the same jar
 under separate paths, allowing consumers to validate against a specific spec version.
 
