@@ -1,0 +1,27 @@
+# dwc-dp-schemas/Taskfile.dist.yaml
+version: '3'
+
+tasks:
+
+  default:
+    desc: List all available tasks (same as `task --list`)
+    silent: true
+    cmds:
+      - task --list
+
+  generate-schema-summary:
+    desc: Regenerate schema-summary.json for all bundle versions, or one if VERSION is set
+    summary: |
+      Compiles src/main/resources/schemas/{version}/table-schemas/*.json into a single compact
+      schema-summary.json alongside index.json and dwc-dp-profile.json — field names, types,
+      constraints, and strong vs. weak relationships, stripped of prose. Requires jq.
+
+      With no VERSION set, discovers and regenerates every version directory under
+      src/main/resources/schemas/. Pass VERSION to regenerate just one.
+
+      Commit the result; this is a docs artifact checked into git, not something generated at
+      build time or read by any consumer of this jar at runtime.
+
+      Vars: VERSION (optional — regenerates all versions if unset).
+    cmds:
+      - scripts/generate-schema-summary.sh {{.VERSION}}
