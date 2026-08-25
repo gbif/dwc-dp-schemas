@@ -9,7 +9,7 @@
   </parent>
 
   <artifactId>dwc-dp-schemas</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <packaging>jar</packaging>
 
   <name>dwc-dp-schemas</name>
@@ -20,7 +20,7 @@
     <connection>scm:git:git@github.com:gbif/dwc-dp-schemas.git</connection>
     <url>https://github.com/gbif/dwc-dp-schemas</url>
     <developerConnection>scm:git:git@github.com:gbif/dwc-dp-schemas.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>dwc-dp-schemas-0.0.3</tag>
   </scm>
 
   <distributionManagement>
